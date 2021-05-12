@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  background-color: whitesmoke;
+}
+
+/********************** game container *************************/
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  max-width: 95%;
+  max-height: 90%;
+  box-shadow: 0px 5px 20px 4px rgba(0, 0, 0, 0.4);
+}
+
+/**************************** header ****************************/
+.header {
+  background-color: dodgerblue;
+  color: white;
+  font-size: calc(22px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+/**************************** player container ****************************/
+.player-container {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player-container h2 {
+  font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.player-container span {
+  margin: 0px 5px;
+}
+
+.player-container .actions {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* *************************** font-awesome icons ************************** */
+
+/*action icons  */
+.far {
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#player .far {
+  color: lightskyblue;
+}
+#player .choice {
+  color: dodgerblue;
+}
+#computer .far {
+  color: lightsalmon;
+}
+#computer .choice {
+  color: salmon;
+}
+
+.selected {
+  color: black !important;
+}
+
+/* reset icon */
+.fas {
+  font-size: 30px;
+  margin-left: 10px;
+  color: lightseagreen;
+  cursor: pointer;
+}
+
+/* ********************************** result  win/lose ******************************* */
+.result-text {
+  text-align: center;
+  font-size: 35px;
+}
+
+/* ********************************* confetti animation******************************** */
+
+.dot-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  z-index: 5000;
+  pointer-events: none;
+}
+.dot {
+  position: absolute;
+  pointer-events: none; /*performance optimization*/
+}
